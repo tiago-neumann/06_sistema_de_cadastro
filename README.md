@@ -55,15 +55,12 @@ Sistema simples de **cadastro, login e área do usuário** feito em PHP + MySQL,
 Crie o banco `sistema_cadastro` e a tabela `usuario`:
 
 ```sql
-CREATE DATABASE IF NOT EXISTS sistema_cadastro
-  CHARACTER SET utf8mb4
-  COLLATE utf8mb4_unicode_ci;
-
+CREATE DATABASE sistema_cadastro;
 USE sistema_cadastro;
 
-CREATE TABLE usuario (
-    id    INT AUTO_INCREMENT PRIMARY KEY,
-    nome  VARCHAR(100) NOT NULL,
+CREATE TABLE usuario(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
     email VARCHAR(150) NOT NULL UNIQUE,
     senha VARCHAR(255) NOT NULL  -- guarda o hash gerado por password_hash()
 );
@@ -85,17 +82,6 @@ CREATE TABLE usuario (
    ```
 6. Acesse `http://localhost/NOME-DA-PASTA/cadastro.php`.
 
-## 🌍 Hospedagem
-
-| Item              | Informação                          |
-|-------------------|-------------------------------------|
-| Provedor          | _preencher_                         |
-| URL do site       | _preencher_                         |
-| Versão do PHP     | _preencher_                         |
-| Banco de dados    | _preencher (host, nome do banco)_   |
-
-> ⚠️ Em produção, **não use** `root` sem senha. Crie um usuário do MySQL exclusivo para o projeto e atualize o `conexao.php` com as credenciais fornecidas pela hospedagem.
-
 ## 🔒 Segurança
 
 - Senhas armazenadas com `password_hash()` (nunca em texto puro).
@@ -116,6 +102,6 @@ CREATE TABLE usuario (
 
 <div align="center">
 
-Feito com 💙 em PHP
+Feito em PHP
 
 </div>
