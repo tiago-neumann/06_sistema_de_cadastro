@@ -1,10 +1,7 @@
 <?php
 
+//Inicia a sessão para puxar os dados de outras páginas
 session_start();
-
-require 'conexao.php';
-
-
 
 ?>
 

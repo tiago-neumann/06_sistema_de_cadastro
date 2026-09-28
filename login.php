@@ -22,28 +22,38 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
     } else {
 
+        //Cria o comando sql para pedir um email
         $sql = "SELECT * FROM usuario WHERE email = ? LIMIT 1";
 
+        //Prepara o comando
         $stmt = $conexao->prepare($sql);
 
+        //Altera a variável no código pelo email digitado e executa o comando em busca desse email
         $stmt->bind_param("s", $email);
         $stmt->execute();
 
+        //Pega o resultado dess busca e transforma em variavel
         $resultado = $stmt->get_result();
+
+        //Pega todos os dados do usuário e transforma em uma array
         $usuario = $resultado->fetch_assoc();
 
+        //Verifica se o usuário existe
         if(!$usuario) {
 
             $erro = "Usuário ou senhas incorretas.";
 
         } else {
 
+            //Pega a senha digitada e a guardada no banco e compara as duas
             if(password_verify($senha, $usuario['senha'])){
 
+                //Adiciona os dados no session a fim de utilizar futuramente
                 $_SESSION['id_usuario'] = $usuario['id'];
                 $_SESSION['email_usuario'] = $usuario['email'];
                 $_SESSION['nome_usuario'] = $usuario['nome'];
 
+                //Manda para a pagina index.php
                 header("Location: index.php");
                 exit;
 
