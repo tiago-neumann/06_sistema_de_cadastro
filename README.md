@@ -4,17 +4,7 @@
 
 Sistema simples de **cadastro, login e área do usuário** feito em PHP + MySQL, com interface em estilo *liquid glass* (vidro translúcido sobre gradiente animado).
 
-[![Acessar site](https://img.shields.io/badge/🌐_Acessar_o_site-0039b4?style=for-the-badge)](https://SEU-SITE-AQUI.com)
-[![Cadastro](https://img.shields.io/badge/📝_Criar_conta-005d88?style=for-the-badge)](https://SEU-SITE-AQUI.com/cadastro.php)
-[![Login](https://img.shields.io/badge/🔑_Entrar-6293bb?style=for-the-badge)](https://SEU-SITE-AQUI.com/login.php)
-
-[![Repositório](https://img.shields.io/badge/GitHub-Repositório-181717?style=for-the-badge&logo=github)](https://github.com/SEU-USUARIO/SEU-REPOSITORIO)
-[![Hospedagem](https://img.shields.io/badge/Hospedado_em-NOME_DA_HOSPEDAGEM-2ea44f?style=for-the-badge)](https://LINK-DA-HOSPEDAGEM.com)
-[![Painel](https://img.shields.io/badge/⚙️_Painel_de_controle-555?style=for-the-badge)](https://LINK-DO-PAINEL.com)
-
 </div>
-
-> 💡 **Como usar os botões:** substitua `SEU-SITE-AQUI.com`, `SEU-USUARIO/SEU-REPOSITORIO` e os demais links pelos endereços reais. Para trocar o texto ou a cor de um botão, edite a URL do `img.shields.io` (formato: `badge/TEXTO-COR`).
 
 ---
 
