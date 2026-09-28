@@ -42,7 +42,6 @@
 
 body {
     min-height: 100vh;
-
     display: flex;
     flex-direction: column;
 
@@ -84,32 +83,37 @@ nav {
 }
 
 main {
-    flex: 1;
-
-    width: 100%;
-
+    position: absolute;
+    inset: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px;
+}
 
-    padding: 40px 20px;
+a{
+    color: var(--texto-secundario);
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--texto);
+    text-decoration: underline;
+}
+
+a:active{
+    color: var(--texto-secundario);
+    text-decoration: none;
 }
 
 .bloco {
     position: relative;
-
     width: 100%;
     max-width: 420px;
-
     padding: 32px;
-
-    margin: 10px;
-
+    margin: 0;
     border-radius: var(--radius);
-
-    align-items: center;
-    justify-content: center;
-
     overflow: hidden;
 }
 
@@ -233,12 +237,12 @@ main {
         inset 0 -1px 0 rgba(255, 255, 255, 0.08);
 }
 
-.cadastro {
+.estrutura {
     display: flex;
     flex-direction: column;
 }
 
-.cadastro form {
+.estrutura form {
     position: relative;
 
     display: flex;
@@ -249,7 +253,7 @@ main {
     gap: 14px;
 }
 
-.cadastro h1 {
+.estrutura h1 {
     margin-bottom: 8px;
 
     color: var(--texto);
@@ -263,7 +267,7 @@ main {
 }
 
 
-.cadastro .subtitulo {
+.estrutura .subtitulo {
     margin-bottom: 18px;
 
     color: var(--texto-secundario);
@@ -274,7 +278,7 @@ main {
     text-align: center;
 }
 
-.cadastro input {
+.estrutura input {
     width: 100%;
     height: 52px;
 
@@ -305,12 +309,12 @@ main {
         transform 0.25s ease;
 }
 
-.cadastro input::placeholder {
+.estrutura input::placeholder {
     color: rgba(255, 255, 255, 0.55);
 }
 
 
-.cadastro input:hover {
+.estrutura input:hover {
     background:
         var(--input-hover);
 
@@ -318,7 +322,7 @@ main {
         rgba(255, 255, 255, 0.22);
 }
 
-.cadastro input:focus {
+.estrutura input:focus {
     background:
         rgba(255, 255, 255, 0.14);
 
@@ -331,7 +335,7 @@ main {
         0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
-.cadastro input[type="submit"] {
+.estrutura input[type="submit"] {
     margin-top: 8px;
 
     height: 54px;
@@ -367,7 +371,7 @@ main {
         border-color 0.25s ease;
 }
 
-.cadastro input[type="submit"]:hover {
+.estrutura input[type="submit"]:hover {
     transform: translateY(-2px);
 
     background:
@@ -385,7 +389,7 @@ main {
         0 12px 28px rgba(0, 0, 0, 0.15);
 }
 
-.cadastro input[type="submit"]:active {
+.estrutura input[type="submit"]:active {
     transform: scale(0.98);
 }
 
@@ -418,7 +422,7 @@ footer {
         border-radius: 21px;
     }
 
-    .cadastro h1 {
+    .estrutura h1 {
         font-size: 25px;
     }
 
@@ -431,8 +435,8 @@ footer {
     }
 
     .vidro,
-    .cadastro input,
-    .cadastro input[type="submit"] {
+    .estrutura input,
+    .estrutura input[type="submit"] {
         transition: none;
     }
 
@@ -442,6 +446,9 @@ footer {
 
 }
 
-.erro{
-    
+.erro {
+    display: flex;
+    justify-content: center;
+
+    font-size: 0.8rem;
 }
