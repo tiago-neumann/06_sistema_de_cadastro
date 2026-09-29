@@ -335,10 +335,12 @@ a:active{
         0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
-.estrutura input[type="submit"] {
+.estrutura input[type="submit"],
+.estrutura button {
     margin-top: 8px;
 
     height: 54px;
+    width: 100%;
 
     border: 1px solid rgba(255, 255, 255, 0.30);
 
@@ -371,7 +373,8 @@ a:active{
         border-color 0.25s ease;
 }
 
-.estrutura input[type="submit"]:hover {
+.estrutura input[type="submit"]:hover,
+.estrutura button:hover {
     transform: translateY(-2px);
 
     background:
@@ -389,8 +392,16 @@ a:active{
         0 12px 28px rgba(0, 0, 0, 0.15);
 }
 
-.estrutura input[type="submit"]:active {
+.estrutura input[type="submit"]:active, 
+.estrutura button:active{
     transform: scale(0.98);
+}
+
+.ocupacao{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
 }
 
 footer {

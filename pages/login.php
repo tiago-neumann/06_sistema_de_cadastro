@@ -53,8 +53,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
                 $_SESSION['email_usuario'] = $usuario['email'];
                 $_SESSION['nome_usuario'] = $usuario['nome'];
 
-                //Manda para a pagina index.php
-                header("Location: index.php");
+                //Manda para a pagina inicial.php
+                header("Location: inicial.php");
                 exit;
 
             } else {

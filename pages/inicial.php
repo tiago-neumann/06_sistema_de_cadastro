@@ -1,3 +1,9 @@
+<?php
+
+require_once 'autorizacao.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -17,13 +23,21 @@
     </header>
     <main>
         <div class="bloco vidro liquido estrutura">
-            <h1>Sistema de cadastro</h1>
-            <p class="subtitulo">Selecione o método de entrada</p>
 
-            <div class="ocupacao">
-                <button onclick="window.location.href='login.php'">Entrar</button>
-                <button onclick="window.location.href='cadastro.php'">Criar conta</button>
-            </div>
+            <h1>Usuário</h1>
+            <p>
+                <strong>Nome:</strong> <?= htmlspecialchars($_SESSION['nome_usuario']) ?>
+            </p>
+            <p>
+                <strong>Email:</strong> <?= htmlspecialchars($_SESSION['email_usuario']) ?>
+            </p>
+
+            <br>
+            
+            <form action="logout.php" method="POST">
+                <button type="submit">Encerrar sessão</button>
+            </form>
+
         </div>
     </main>
 
